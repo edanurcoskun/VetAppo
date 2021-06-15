@@ -1,0 +1,319 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/widgets/form.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/material/text_form_field.dart', 'packages/flutterapp/models/Appointment.dart', 'packages/flutter/src/services/text_input.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/material/colors.dart'], (function load__packages__flutterapp__vetappoapp__generatedappo_second_page_userwidget__generated__GeneratedAgeWidget1_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__widgets__form$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__material__text_form_field$46dart, packages__flutterapp__models__Appointment$46dart, packages__flutter__src__services__text_input$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__material__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const editable_text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__editable_text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const form = packages__flutter__src__widgets__form$46dart.src__widgets__form;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const text_form_field = packages__flutter__src__material__text_form_field$46dart.src__material__text_form_field;
+  const Appointment = packages__flutterapp__models__Appointment$46dart.models__Appointment;
+  const text_input = packages__flutter__src__services__text_input$46dart.src__services__text_input;
+  const input_decorator = packages__flutter__src__material__icon_button$46dart.src__material__input_decorator;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  var GeneratedAgeWidget1 = Object.create(dart.library);
+  var $isEmpty = dartx.isEmpty;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    FormStateL: () => (T.FormStateL = dart.constFn(dart.legacy(form.FormState)))(),
+    GlobalKeyOfFormStateL: () => (T.GlobalKeyOfFormStateL = dart.constFn(framework.GlobalKey$(T.FormStateL())))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    StringLToStringL: () => (T.StringLToStringL = dart.constFn(dart.fnType(T.StringL(), [T.StringL()])))(),
+    StringLToNull: () => (T.StringLToNull = dart.constFn(dart.fnType(core.Null, [T.StringL()])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 23,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 17,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 17,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 38,
+        [_Location_file]: "file:///D:/VetAppo/lib/vetappoapp/generatedappo_second_page_userwidget/generated/GeneratedAgeWidget1.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 13,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "validator",
+        [_Location_column]: 13,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onFieldSubmitted",
+        [_Location_column]: 13,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChanged",
+        [_Location_column]: 13,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textCapitalization",
+        [_Location_column]: 13,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textInputAction",
+        [_Location_column]: 13,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "keyboardType",
+        [_Location_column]: 13,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 13,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 13,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7, C[8] || CT.C8, C[9] || CT.C9, C[10] || CT.C10, C[11] || CT.C11, C[12] || CT.C12, C[13] || CT.C13, C[14] || CT.C14, C[15] || CT.C15], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 17,
+        [_Location_file]: "file:///D:/VetAppo/lib/vetappoapp/generatedappo_second_page_userwidget/generated/GeneratedAgeWidget1.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 25,
+        [_Location_line]: 16,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.constList([C[18] || CT.C18], T._LocationL());
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[17] || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 16,
+        [_Location_file]: "file:///D:/VetAppo/lib/vetappoapp/generatedappo_second_page_userwidget/generated/GeneratedAgeWidget1.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 9,
+        [_Location_line]: 15,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 16,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.constList([C[21] || CT.C21, C[22] || CT.C22], T._LocationL());
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[20] || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 14,
+        [_Location_file]: "file:///D:/VetAppo/lib/vetappoapp/generatedappo_second_page_userwidget/generated/GeneratedAgeWidget1.dart"
+      });
+    }
+  }, false);
+  var C = Array(23).fill(void 0);
+  var I = ["package:flutterapp/vetappoapp/generatedappo_second_page_userwidget/generated/GeneratedAgeWidget1.dart"];
+  GeneratedAgeWidget1.GeneratedAgeWidget1 = class GeneratedAgeWidget1$ extends framework.StatefulWidget {
+    createState() {
+      return new GeneratedAgeWidget1._GeneratedAgeWidget1.new();
+    }
+  };
+  (GeneratedAgeWidget1.GeneratedAgeWidget1.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    GeneratedAgeWidget1.GeneratedAgeWidget1.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = GeneratedAgeWidget1.GeneratedAgeWidget1.prototype;
+  dart.addTypeTests(GeneratedAgeWidget1.GeneratedAgeWidget1);
+  dart.addTypeCaches(GeneratedAgeWidget1.GeneratedAgeWidget1);
+  dart.setMethodSignature(GeneratedAgeWidget1.GeneratedAgeWidget1, () => ({
+    __proto__: dart.getMethods(GeneratedAgeWidget1.GeneratedAgeWidget1.__proto__),
+    createState: dart.fnType(dart.legacy(GeneratedAgeWidget1._GeneratedAgeWidget1), [])
+  }));
+  dart.setLibraryUri(GeneratedAgeWidget1.GeneratedAgeWidget1, I[0]);
+  var _formKey = dart.privateName(GeneratedAgeWidget1, "_formKey");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  GeneratedAgeWidget1._GeneratedAgeWidget1 = class _GeneratedAgeWidget1 extends framework.State$(dart.legacy(GeneratedAgeWidget1.GeneratedAgeWidget1)) {
+    build(context) {
+      return new form.Form.new({key: this[_formKey], child: new scroll_view.ListView.new({children: T.JSArrayOfWidgetL().of([new text_form_field.TextFormField.new({controller: this.myController, validator: dart.fn(enteredText => {
+                if (enteredText[$isEmpty]) {
+                  return "Age field cannot be empty!";
+                } else {
+                  return null;
+                }
+              }, T.StringLToStringL()), onFieldSubmitted: dart.fn(enteredText => {
+                this[_formKey].currentState.validate();
+              }, T.StringLToNull()), onChanged: dart.fn(text => {
+                Appointment.createPetAge(this.myController.text);
+              }, T.StringLToNull()), textCapitalization: text_input.TextCapitalization.sentences, textInputAction: text_input.TextInputAction.go, keyboardType: text_input.TextInputType.text, decoration: new input_decorator.InputDecoration.new({fillColor: new ui.Color.fromARGB(150, 255, 255, 255), filled: true, prefixIcon: new icon.Icon.new(icons.Icons.help_outline, {size: 30.0, color: new ui.Color.fromARGB(255, 20, 126, 185), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), hintText: "Age of the pet", contentPadding: new edge_insets.EdgeInsets.fromLTRB(15.0, 13.0, 7.0, 0.0)}), style: new text_style.TextStyle.new({fontSize: 22.0, color: colors.Colors.black}), $creationLocationd_0dea112b090073317d4: C[5] || CT.C5})]), $creationLocationd_0dea112b090073317d4: C[16] || CT.C16}), $creationLocationd_0dea112b090073317d4: C[19] || CT.C19});
+    }
+  };
+  (GeneratedAgeWidget1._GeneratedAgeWidget1.new = function() {
+    this[_formKey] = T.GlobalKeyOfFormStateL().new();
+    this.myController = new editable_text.TextEditingController.new();
+    GeneratedAgeWidget1._GeneratedAgeWidget1.__proto__.new.call(this);
+    ;
+  }).prototype = GeneratedAgeWidget1._GeneratedAgeWidget1.prototype;
+  dart.addTypeTests(GeneratedAgeWidget1._GeneratedAgeWidget1);
+  dart.addTypeCaches(GeneratedAgeWidget1._GeneratedAgeWidget1);
+  dart.setMethodSignature(GeneratedAgeWidget1._GeneratedAgeWidget1, () => ({
+    __proto__: dart.getMethods(GeneratedAgeWidget1._GeneratedAgeWidget1.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(GeneratedAgeWidget1._GeneratedAgeWidget1, I[0]);
+  dart.setFieldSignature(GeneratedAgeWidget1._GeneratedAgeWidget1, () => ({
+    __proto__: dart.getFields(GeneratedAgeWidget1._GeneratedAgeWidget1.__proto__),
+    [_formKey]: dart.finalFieldType(dart.legacy(framework.GlobalKey$(dart.legacy(form.FormState)))),
+    myController: dart.finalFieldType(dart.legacy(editable_text.TextEditingController))
+  }));
+  dart.trackLibraries("packages/flutterapp/vetappoapp/generatedappo_second_page_userwidget/generated/GeneratedAgeWidget1.dart", {
+    "package:flutterapp/vetappoapp/generatedappo_second_page_userwidget/generated/GeneratedAgeWidget1.dart": GeneratedAgeWidget1
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["GeneratedAgeWidget1.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAKwC;IAAsB;;;;;;EAC9D;;;;;;;;;;;;;;;UAM4B;AACxB,YAAO,yBACE,uBACE,wCAA2B,yBAChC,mDACc,8BACD,QAAC;AACV,oBAAI,AAAY,WAAD;AACb,wBAAO;;AAEP,wBAAO;;0DAGO,QAAC;AACe,gBAAhC,AAAS,AAAa;gDAEb,QAAC;AACqB,gBAA/B,yBAAa,AAAa;yDAEW,0DACN,6CACL,2CAChB,oDACO,sBAAS,KAAK,KAAK,KAAK,cACjC,kBACI,kBACJ,iCACA,aACO,sBAAS,KAAK,IAAI,KAAK,yEAE5B,kCACiB,oCAAS,MAAI,MAAI,KAAG,eAE1C,wCACK,aACI;IAI1B;;;IA1CM,iBAAW;IACX,oBAAe;;;EA0CvB","file":"../../../../../packages/flutterapp/vetappoapp/generatedappo_second_page_userwidget/generated/GeneratedAgeWidget1.dart.lib.js"}');
+  // Exports:
+  return {
+    vetappoapp__generatedappo_second_page_userwidget__generated__GeneratedAgeWidget1: GeneratedAgeWidget1
+  };
+}));
+
+//# sourceMappingURL=GeneratedAgeWidget1.dart.lib.js.map

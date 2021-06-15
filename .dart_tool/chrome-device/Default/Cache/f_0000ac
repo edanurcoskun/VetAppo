@@ -1,0 +1,826 @@
+define(['dart_sdk', 'packages/flutter_datetime_picker/src/i18n_model.dart', 'packages/flutter_datetime_picker/src/datetime_util.dart', 'packages/flutter_datetime_picker/src/date_format.dart'], (function load__packages__flutter_datetime_picker__src__date_model_dart(dart_sdk, packages__flutter_datetime_picker__src__i18n_model$46dart, packages__flutter_datetime_picker__src__datetime_util$46dart, packages__flutter_datetime_picker__src__date_format$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _internal = dart_sdk._internal;
+  const _interceptors = dart_sdk._interceptors;
+  const math = dart_sdk.math;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const i18n_model = packages__flutter_datetime_picker__src__i18n_model$46dart.src__i18n_model;
+  const datetime_util = packages__flutter_datetime_picker__src__datetime_util$46dart.src__datetime_util;
+  const date_format = packages__flutter_datetime_picker__src__date_format$46dart.src__date_format;
+  var date_model = Object.create(dart.library);
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  var $modulo = dartx['%'];
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    JSArrayOfint: () => (T.JSArrayOfint = dart.constFn(_interceptors.JSArray$(core.int)))(),
+    ListOfString: () => (T.ListOfString = dart.constFn(core.List$(core.String)))(),
+    intToString: () => (T.intToString = dart.constFn(dart.fnType(core.String, [core.int])))(),
+    StringN: () => (T.StringN = dart.constFn(dart.nullable(core.String)))(),
+    JSArrayOfString: () => (T.JSArrayOfString = dart.constFn(_interceptors.JSArray$(core.String)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  var C = [];
+  var I = [
+    "package:flutter_datetime_picker/src/date_model.dart",
+    "file:///D:/flutter_windows_2.0.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_datetime_picker-1.5.1/lib/src/date_model.dart"
+  ];
+  date_model.BasePickerModel = class BasePickerModel extends core.Object {};
+  (date_model.BasePickerModel.new = function() {
+    ;
+  }).prototype = date_model.BasePickerModel.prototype;
+  dart.addTypeTests(date_model.BasePickerModel);
+  dart.addTypeCaches(date_model.BasePickerModel);
+  dart.setLibraryUri(date_model.BasePickerModel, I[0]);
+  var __CommonPickerModel_leftList = dart.privateName(date_model, "_#CommonPickerModel#leftList");
+  var __CommonPickerModel_leftList_isSet = dart.privateName(date_model, "_#CommonPickerModel#leftList#isSet");
+  var __CommonPickerModel_middleList = dart.privateName(date_model, "_#CommonPickerModel#middleList");
+  var __CommonPickerModel_middleList_isSet = dart.privateName(date_model, "_#CommonPickerModel#middleList#isSet");
+  var __CommonPickerModel_rightList = dart.privateName(date_model, "_#CommonPickerModel#rightList");
+  var __CommonPickerModel_rightList_isSet = dart.privateName(date_model, "_#CommonPickerModel#rightList#isSet");
+  var __CommonPickerModel_currentTime = dart.privateName(date_model, "_#CommonPickerModel#currentTime");
+  var __CommonPickerModel_currentTime_isSet = dart.privateName(date_model, "_#CommonPickerModel#currentTime#isSet");
+  var __CommonPickerModel__currentLeftIndex = dart.privateName(date_model, "_#CommonPickerModel#_currentLeftIndex");
+  var __CommonPickerModel__currentLeftIndex_isSet = dart.privateName(date_model, "_#CommonPickerModel#_currentLeftIndex#isSet");
+  var __CommonPickerModel__currentMiddleIndex = dart.privateName(date_model, "_#CommonPickerModel#_currentMiddleIndex");
+  var __CommonPickerModel__currentMiddleIndex_isSet = dart.privateName(date_model, "_#CommonPickerModel#_currentMiddleIndex#isSet");
+  var __CommonPickerModel__currentRightIndex = dart.privateName(date_model, "_#CommonPickerModel#_currentRightIndex");
+  var __CommonPickerModel__currentRightIndex_isSet = dart.privateName(date_model, "_#CommonPickerModel#_currentRightIndex#isSet");
+  var __CommonPickerModel_locale = dart.privateName(date_model, "_#CommonPickerModel#locale");
+  var __CommonPickerModel_locale_isSet = dart.privateName(date_model, "_#CommonPickerModel#locale#isSet");
+  var _currentLeftIndex = dart.privateName(date_model, "_currentLeftIndex");
+  var _currentMiddleIndex = dart.privateName(date_model, "_currentMiddleIndex");
+  var _currentRightIndex = dart.privateName(date_model, "_currentRightIndex");
+  date_model.CommonPickerModel = class CommonPickerModel extends date_model.BasePickerModel {
+    get leftList() {
+      let t0;
+      return dart.test(this[__CommonPickerModel_leftList_isSet]) ? (t0 = this[__CommonPickerModel_leftList], t0) : dart.throw(new _internal.LateError.fieldNI("leftList"));
+    }
+    set leftList(t0) {
+      if (t0 == null) dart.nullFailed(I[1], 50, 21, "null");
+      this[__CommonPickerModel_leftList_isSet] = true;
+      this[__CommonPickerModel_leftList] = t0;
+    }
+    get middleList() {
+      let t1;
+      return dart.test(this[__CommonPickerModel_middleList_isSet]) ? (t1 = this[__CommonPickerModel_middleList], t1) : dart.throw(new _internal.LateError.fieldNI("middleList"));
+    }
+    set middleList(t1) {
+      if (t1 == null) dart.nullFailed(I[1], 51, 21, "null");
+      this[__CommonPickerModel_middleList_isSet] = true;
+      this[__CommonPickerModel_middleList] = t1;
+    }
+    get rightList() {
+      let t2;
+      return dart.test(this[__CommonPickerModel_rightList_isSet]) ? (t2 = this[__CommonPickerModel_rightList], t2) : dart.throw(new _internal.LateError.fieldNI("rightList"));
+    }
+    set rightList(t2) {
+      if (t2 == null) dart.nullFailed(I[1], 52, 21, "null");
+      this[__CommonPickerModel_rightList_isSet] = true;
+      this[__CommonPickerModel_rightList] = t2;
+    }
+    get currentTime() {
+      let t3;
+      return dart.test(this[__CommonPickerModel_currentTime_isSet]) ? (t3 = this[__CommonPickerModel_currentTime], t3) : dart.throw(new _internal.LateError.fieldNI("currentTime"));
+    }
+    set currentTime(t3) {
+      if (t3 == null) dart.nullFailed(I[1], 53, 17, "null");
+      this[__CommonPickerModel_currentTime_isSet] = true;
+      this[__CommonPickerModel_currentTime] = t3;
+    }
+    get [_currentLeftIndex]() {
+      let t4;
+      return dart.test(this[__CommonPickerModel__currentLeftIndex_isSet]) ? (t4 = this[__CommonPickerModel__currentLeftIndex], t4) : dart.throw(new _internal.LateError.fieldNI("_currentLeftIndex"));
+    }
+    set [_currentLeftIndex](t4) {
+      if (t4 == null) dart.nullFailed(I[1], 54, 12, "null");
+      this[__CommonPickerModel__currentLeftIndex_isSet] = true;
+      this[__CommonPickerModel__currentLeftIndex] = t4;
+    }
+    get [_currentMiddleIndex]() {
+      let t5;
+      return dart.test(this[__CommonPickerModel__currentMiddleIndex_isSet]) ? (t5 = this[__CommonPickerModel__currentMiddleIndex], t5) : dart.throw(new _internal.LateError.fieldNI("_currentMiddleIndex"));
+    }
+    set [_currentMiddleIndex](t5) {
+      if (t5 == null) dart.nullFailed(I[1], 55, 12, "null");
+      this[__CommonPickerModel__currentMiddleIndex_isSet] = true;
+      this[__CommonPickerModel__currentMiddleIndex] = t5;
+    }
+    get [_currentRightIndex]() {
+      let t6;
+      return dart.test(this[__CommonPickerModel__currentRightIndex_isSet]) ? (t6 = this[__CommonPickerModel__currentRightIndex], t6) : dart.throw(new _internal.LateError.fieldNI("_currentRightIndex"));
+    }
+    set [_currentRightIndex](t6) {
+      if (t6 == null) dart.nullFailed(I[1], 56, 12, "null");
+      this[__CommonPickerModel__currentRightIndex_isSet] = true;
+      this[__CommonPickerModel__currentRightIndex] = t6;
+    }
+    get locale() {
+      let t7;
+      return dart.test(this[__CommonPickerModel_locale_isSet]) ? (t7 = this[__CommonPickerModel_locale], t7) : dart.throw(new _internal.LateError.fieldNI("locale"));
+    }
+    set locale(t7) {
+      if (t7 == null) dart.nullFailed(I[1], 58, 19, "null");
+      this[__CommonPickerModel_locale_isSet] = true;
+      this[__CommonPickerModel_locale] = t7;
+    }
+    leftStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 64, 33, "index");
+      return null;
+    }
+    middleStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 69, 35, "index");
+      return null;
+    }
+    rightStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 74, 34, "index");
+      return null;
+    }
+    currentLeftIndex() {
+      return this[_currentLeftIndex];
+    }
+    currentMiddleIndex() {
+      return this[_currentMiddleIndex];
+    }
+    currentRightIndex() {
+      return this[_currentRightIndex];
+    }
+    setLeftIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 94, 25, "index");
+      this[_currentLeftIndex] = index;
+    }
+    setMiddleIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 99, 27, "index");
+      this[_currentMiddleIndex] = index;
+    }
+    setRightIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 104, 26, "index");
+      this[_currentRightIndex] = index;
+    }
+    leftDivider() {
+      return "";
+    }
+    rightDivider() {
+      return "";
+    }
+    layoutProportions() {
+      return T.JSArrayOfint().of([1, 1, 1]);
+    }
+    finalTime() {
+      return null;
+    }
+  };
+  (date_model.CommonPickerModel.new = function(opts) {
+    let t0;
+    let locale = opts && 'locale' in opts ? opts.locale : null;
+    this[__CommonPickerModel_leftList] = null;
+    this[__CommonPickerModel_leftList_isSet] = false;
+    this[__CommonPickerModel_middleList] = null;
+    this[__CommonPickerModel_middleList_isSet] = false;
+    this[__CommonPickerModel_rightList] = null;
+    this[__CommonPickerModel_rightList_isSet] = false;
+    this[__CommonPickerModel_currentTime] = null;
+    this[__CommonPickerModel_currentTime_isSet] = false;
+    this[__CommonPickerModel__currentLeftIndex] = null;
+    this[__CommonPickerModel__currentLeftIndex_isSet] = false;
+    this[__CommonPickerModel__currentMiddleIndex] = null;
+    this[__CommonPickerModel__currentMiddleIndex_isSet] = false;
+    this[__CommonPickerModel__currentRightIndex] = null;
+    this[__CommonPickerModel__currentRightIndex_isSet] = false;
+    this[__CommonPickerModel_locale] = null;
+    this[__CommonPickerModel_locale_isSet] = false;
+    this[__CommonPickerModel_locale_isSet] = true;
+    this[__CommonPickerModel_locale] = (t0 = locale, t0 == null ? i18n_model.LocaleType.en : t0);
+    ;
+  }).prototype = date_model.CommonPickerModel.prototype;
+  dart.addTypeTests(date_model.CommonPickerModel);
+  dart.addTypeCaches(date_model.CommonPickerModel);
+  dart.setMethodSignature(date_model.CommonPickerModel, () => ({
+    __proto__: dart.getMethods(date_model.CommonPickerModel.__proto__),
+    leftStringAtIndex: dart.fnType(dart.nullable(core.String), [core.int]),
+    middleStringAtIndex: dart.fnType(dart.nullable(core.String), [core.int]),
+    rightStringAtIndex: dart.fnType(dart.nullable(core.String), [core.int]),
+    currentLeftIndex: dart.fnType(core.int, []),
+    currentMiddleIndex: dart.fnType(core.int, []),
+    currentRightIndex: dart.fnType(core.int, []),
+    setLeftIndex: dart.fnType(dart.void, [core.int]),
+    setMiddleIndex: dart.fnType(dart.void, [core.int]),
+    setRightIndex: dart.fnType(dart.void, [core.int]),
+    leftDivider: dart.fnType(core.String, []),
+    rightDivider: dart.fnType(core.String, []),
+    layoutProportions: dart.fnType(core.List$(core.int), []),
+    finalTime: dart.fnType(dart.nullable(core.DateTime), [])
+  }));
+  dart.setGetterSignature(date_model.CommonPickerModel, () => ({
+    __proto__: dart.getGetters(date_model.CommonPickerModel.__proto__),
+    leftList: core.List$(core.String),
+    middleList: core.List$(core.String),
+    rightList: core.List$(core.String),
+    currentTime: core.DateTime,
+    [_currentLeftIndex]: core.int,
+    [_currentMiddleIndex]: core.int,
+    [_currentRightIndex]: core.int,
+    locale: i18n_model.LocaleType
+  }));
+  dart.setSetterSignature(date_model.CommonPickerModel, () => ({
+    __proto__: dart.getSetters(date_model.CommonPickerModel.__proto__),
+    leftList: core.List$(core.String),
+    middleList: core.List$(core.String),
+    rightList: core.List$(core.String),
+    currentTime: core.DateTime,
+    [_currentLeftIndex]: core.int,
+    [_currentMiddleIndex]: core.int,
+    [_currentRightIndex]: core.int,
+    locale: i18n_model.LocaleType
+  }));
+  dart.setLibraryUri(date_model.CommonPickerModel, I[0]);
+  dart.setFieldSignature(date_model.CommonPickerModel, () => ({
+    __proto__: dart.getFields(date_model.CommonPickerModel.__proto__),
+    [__CommonPickerModel_leftList]: dart.fieldType(dart.nullable(core.List$(core.String))),
+    [__CommonPickerModel_leftList_isSet]: dart.fieldType(core.bool),
+    [__CommonPickerModel_middleList]: dart.fieldType(dart.nullable(core.List$(core.String))),
+    [__CommonPickerModel_middleList_isSet]: dart.fieldType(core.bool),
+    [__CommonPickerModel_rightList]: dart.fieldType(dart.nullable(core.List$(core.String))),
+    [__CommonPickerModel_rightList_isSet]: dart.fieldType(core.bool),
+    [__CommonPickerModel_currentTime]: dart.fieldType(dart.nullable(core.DateTime)),
+    [__CommonPickerModel_currentTime_isSet]: dart.fieldType(core.bool),
+    [__CommonPickerModel__currentLeftIndex]: dart.fieldType(dart.nullable(core.int)),
+    [__CommonPickerModel__currentLeftIndex_isSet]: dart.fieldType(core.bool),
+    [__CommonPickerModel__currentMiddleIndex]: dart.fieldType(dart.nullable(core.int)),
+    [__CommonPickerModel__currentMiddleIndex_isSet]: dart.fieldType(core.bool),
+    [__CommonPickerModel__currentRightIndex]: dart.fieldType(dart.nullable(core.int)),
+    [__CommonPickerModel__currentRightIndex_isSet]: dart.fieldType(core.bool),
+    [__CommonPickerModel_locale]: dart.fieldType(dart.nullable(i18n_model.LocaleType)),
+    [__CommonPickerModel_locale_isSet]: dart.fieldType(core.bool)
+  }));
+  var __DatePickerModel_maxTime = dart.privateName(date_model, "_#DatePickerModel#maxTime");
+  var __DatePickerModel_maxTime_isSet = dart.privateName(date_model, "_#DatePickerModel#maxTime#isSet");
+  var __DatePickerModel_minTime = dart.privateName(date_model, "_#DatePickerModel#minTime");
+  var __DatePickerModel_minTime_isSet = dart.privateName(date_model, "_#DatePickerModel#minTime#isSet");
+  var _fillLeftLists = dart.privateName(date_model, "_fillLeftLists");
+  var _fillMiddleLists = dart.privateName(date_model, "_fillMiddleLists");
+  var _fillRightLists = dart.privateName(date_model, "_fillRightLists");
+  var _minMonthOfCurrentYear = dart.privateName(date_model, "_minMonthOfCurrentYear");
+  var _minDayOfCurrentMonth = dart.privateName(date_model, "_minDayOfCurrentMonth");
+  var _localeYear = dart.privateName(date_model, "_localeYear");
+  var _maxMonthOfCurrentYear = dart.privateName(date_model, "_maxMonthOfCurrentYear");
+  var _maxDayOfCurrentMonth = dart.privateName(date_model, "_maxDayOfCurrentMonth");
+  var _localeMonth = dart.privateName(date_model, "_localeMonth");
+  var _localeDay = dart.privateName(date_model, "_localeDay");
+  date_model.DatePickerModel = class DatePickerModel extends date_model.CommonPickerModel {
+    get maxTime() {
+      let t8;
+      return dart.test(this[__DatePickerModel_maxTime_isSet]) ? (t8 = this[__DatePickerModel_maxTime], t8) : dart.throw(new _internal.LateError.fieldNI("maxTime"));
+    }
+    set maxTime(t8) {
+      if (t8 == null) dart.nullFailed(I[1], 131, 17, "null");
+      this[__DatePickerModel_maxTime_isSet] = true;
+      this[__DatePickerModel_maxTime] = t8;
+    }
+    get minTime() {
+      let t9;
+      return dart.test(this[__DatePickerModel_minTime_isSet]) ? (t9 = this[__DatePickerModel_minTime], t9) : dart.throw(new _internal.LateError.fieldNI("minTime"));
+    }
+    set minTime(t9) {
+      if (t9 == null) dart.nullFailed(I[1], 132, 17, "null");
+      this[__DatePickerModel_minTime_isSet] = true;
+      this[__DatePickerModel_minTime] = t9;
+    }
+    [_fillLeftLists]() {
+      this.leftList = T.ListOfString().generate(dart.notNull(this.maxTime.year) - dart.notNull(this.minTime.year) + 1, dart.fn(index => {
+        if (index == null) dart.nullFailed(I[1], 164, 73, "index");
+        return dart.str(dart.notNull(this.minTime.year) + dart.notNull(index)) + dart.str(this[_localeYear]());
+      }, T.intToString()));
+    }
+    [_maxMonthOfCurrentYear]() {
+      return this.currentTime.year == this.maxTime.year ? this.maxTime.month : 12;
+    }
+    [_minMonthOfCurrentYear]() {
+      return this.currentTime.year == this.minTime.year ? this.minTime.month : 1;
+    }
+    [_maxDayOfCurrentMonth]() {
+      let dayCount = datetime_util.calcDateCount(this.currentTime.year, this.currentTime.month);
+      return this.currentTime.year == this.maxTime.year && this.currentTime.month == this.maxTime.month ? this.maxTime.day : dayCount;
+    }
+    [_minDayOfCurrentMonth]() {
+      return this.currentTime.year == this.minTime.year && this.currentTime.month == this.minTime.month ? this.minTime.day : 1;
+    }
+    [_fillMiddleLists]() {
+      let minMonth = this[_minMonthOfCurrentYear]();
+      let maxMonth = this[_maxMonthOfCurrentYear]();
+      this.middleList = T.ListOfString().generate(dart.notNull(maxMonth) - dart.notNull(minMonth) + 1, dart.fn(index => {
+        if (index == null) dart.nullFailed(I[1], 197, 67, "index");
+        return dart.str(this[_localeMonth](dart.notNull(minMonth) + dart.notNull(index)));
+      }, T.intToString()));
+    }
+    [_fillRightLists]() {
+      let maxDay = this[_maxDayOfCurrentMonth]();
+      let minDay = this[_minDayOfCurrentMonth]();
+      this.rightList = T.ListOfString().generate(dart.notNull(maxDay) - dart.notNull(minDay) + 1, dart.fn(index => {
+        if (index == null) dart.nullFailed(I[1], 205, 62, "index");
+        return dart.str(dart.notNull(minDay) + dart.notNull(index)) + dart.str(this[_localeDay]());
+      }, T.intToString()));
+    }
+    setLeftIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 211, 25, "index");
+      super.setLeftIndex(index);
+      let destYear = dart.notNull(index) + dart.notNull(this.minTime.year);
+      let minMonth = this[_minMonthOfCurrentYear]();
+      let newTime = null;
+      if (this.currentTime.month === 2 && this.currentTime.day === 29) {
+        newTime = dart.test(this.currentTime.isUtc) ? new core.DateTime.utc(destYear, this.currentTime.month, datetime_util.calcDateCount(destYear, 2)) : new core.DateTime.new(destYear, this.currentTime.month, datetime_util.calcDateCount(destYear, 2));
+      } else {
+        newTime = dart.test(this.currentTime.isUtc) ? new core.DateTime.utc(destYear, this.currentTime.month, this.currentTime.day) : new core.DateTime.new(destYear, this.currentTime.month, this.currentTime.day);
+      }
+      if (dart.test(newTime.isAfter(this.maxTime))) {
+        this.currentTime = this.maxTime;
+      } else if (dart.test(newTime.isBefore(this.minTime))) {
+        this.currentTime = this.minTime;
+      } else {
+        this.currentTime = newTime;
+      }
+      this[_fillMiddleLists]();
+      this[_fillRightLists]();
+      minMonth = this[_minMonthOfCurrentYear]();
+      let minDay = this[_minDayOfCurrentMonth]();
+      this[_currentMiddleIndex] = dart.notNull(this.currentTime.month) - dart.notNull(minMonth);
+      this[_currentRightIndex] = dart.notNull(this.currentTime.day) - dart.notNull(minDay);
+    }
+    setMiddleIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 261, 27, "index");
+      super.setMiddleIndex(index);
+      let minMonth = this[_minMonthOfCurrentYear]();
+      let destMonth = dart.notNull(minMonth) + dart.notNull(index);
+      let newTime = null;
+      let dayCount = datetime_util.calcDateCount(this.currentTime.year, destMonth);
+      newTime = dart.test(this.currentTime.isUtc) ? new core.DateTime.utc(this.currentTime.year, destMonth, dart.notNull(this.currentTime.day) <= dart.notNull(dayCount) ? this.currentTime.day : dayCount) : new core.DateTime.new(this.currentTime.year, destMonth, dart.notNull(this.currentTime.day) <= dart.notNull(dayCount) ? this.currentTime.day : dayCount);
+      if (dart.test(newTime.isAfter(this.maxTime))) {
+        this.currentTime = this.maxTime;
+      } else if (dart.test(newTime.isBefore(this.minTime))) {
+        this.currentTime = this.minTime;
+      } else {
+        this.currentTime = newTime;
+      }
+      this[_fillRightLists]();
+      let minDay = this[_minDayOfCurrentMonth]();
+      this[_currentRightIndex] = dart.notNull(this.currentTime.day) - dart.notNull(minDay);
+    }
+    setRightIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 295, 26, "index");
+      super.setRightIndex(index);
+      let minDay = this[_minDayOfCurrentMonth]();
+      this.currentTime = dart.test(this.currentTime.isUtc) ? new core.DateTime.utc(this.currentTime.year, this.currentTime.month, dart.notNull(minDay) + dart.notNull(index)) : new core.DateTime.new(this.currentTime.year, this.currentTime.month, dart.notNull(minDay) + dart.notNull(index));
+    }
+    leftStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 312, 33, "index");
+      if (dart.notNull(index) >= 0 && dart.notNull(index) < dart.notNull(this.leftList[$length])) {
+        return this.leftList[$_get](index);
+      } else {
+        return null;
+      }
+    }
+    middleStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 321, 35, "index");
+      if (dart.notNull(index) >= 0 && dart.notNull(index) < dart.notNull(this.middleList[$length])) {
+        return this.middleList[$_get](index);
+      } else {
+        return null;
+      }
+    }
+    rightStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 330, 34, "index");
+      if (dart.notNull(index) >= 0 && dart.notNull(index) < dart.notNull(this.rightList[$length])) {
+        return this.rightList[$_get](index);
+      } else {
+        return null;
+      }
+    }
+    [_localeYear]() {
+      if (this.locale == i18n_model.LocaleType.zh || this.locale == i18n_model.LocaleType.jp) {
+        return "年";
+      } else if (this.locale == i18n_model.LocaleType.ko) {
+        return "년";
+      } else {
+        return "";
+      }
+    }
+    [_localeMonth](month) {
+      if (month == null) dart.nullFailed(I[1], 348, 27, "month");
+      if (this.locale == i18n_model.LocaleType.zh || this.locale == i18n_model.LocaleType.jp) {
+        return dart.str(month) + "月";
+      } else if (this.locale == i18n_model.LocaleType.ko) {
+        return dart.str(month) + "월";
+      } else {
+        let monthStrings = T.ListOfString().as(i18n_model.i18nObjInLocale(this.locale)[$_get]("monthLong"));
+        return core.String.as(monthStrings[$_get](dart.notNull(month) - 1));
+      }
+    }
+    [_localeDay]() {
+      if (this.locale == i18n_model.LocaleType.zh || this.locale == i18n_model.LocaleType.jp) {
+        return "日";
+      } else if (this.locale == i18n_model.LocaleType.ko) {
+        return "일";
+      } else {
+        return "";
+      }
+    }
+    finalTime() {
+      return this.currentTime;
+    }
+  };
+  (date_model.DatePickerModel.new = function(opts) {
+    let t8, t8$, t8$0;
+    let currentTime = opts && 'currentTime' in opts ? opts.currentTime : null;
+    let maxTime = opts && 'maxTime' in opts ? opts.maxTime : null;
+    let minTime = opts && 'minTime' in opts ? opts.minTime : null;
+    let locale = opts && 'locale' in opts ? opts.locale : null;
+    this[__DatePickerModel_maxTime] = null;
+    this[__DatePickerModel_maxTime_isSet] = false;
+    this[__DatePickerModel_minTime] = null;
+    this[__DatePickerModel_minTime_isSet] = false;
+    date_model.DatePickerModel.__proto__.new.call(this, {locale: locale});
+    this.maxTime = (t8 = maxTime, t8 == null ? new core.DateTime.new(2049, 12, 31) : t8);
+    this.minTime = (t8$ = minTime, t8$ == null ? new core.DateTime.new(1970, 1, 1) : t8$);
+    currentTime = (t8$0 = currentTime, t8$0 == null ? new core.DateTime.now() : t8$0);
+    if (dart.notNull(currentTime.compareTo(this.maxTime)) > 0) {
+      currentTime = this.maxTime;
+    } else if (dart.notNull(currentTime.compareTo(this.minTime)) < 0) {
+      currentTime = this.minTime;
+    }
+    this.currentTime = currentTime;
+    this[_fillLeftLists]();
+    this[_fillMiddleLists]();
+    this[_fillRightLists]();
+    let minMonth = this[_minMonthOfCurrentYear]();
+    let minDay = this[_minDayOfCurrentMonth]();
+    this[_currentLeftIndex] = dart.notNull(this.currentTime.year) - dart.notNull(this.minTime.year);
+    this[_currentMiddleIndex] = dart.notNull(this.currentTime.month) - dart.notNull(minMonth);
+    this[_currentRightIndex] = dart.notNull(this.currentTime.day) - dart.notNull(minDay);
+  }).prototype = date_model.DatePickerModel.prototype;
+  dart.addTypeTests(date_model.DatePickerModel);
+  dart.addTypeCaches(date_model.DatePickerModel);
+  dart.setMethodSignature(date_model.DatePickerModel, () => ({
+    __proto__: dart.getMethods(date_model.DatePickerModel.__proto__),
+    [_fillLeftLists]: dart.fnType(dart.void, []),
+    [_maxMonthOfCurrentYear]: dart.fnType(core.int, []),
+    [_minMonthOfCurrentYear]: dart.fnType(core.int, []),
+    [_maxDayOfCurrentMonth]: dart.fnType(core.int, []),
+    [_minDayOfCurrentMonth]: dart.fnType(core.int, []),
+    [_fillMiddleLists]: dart.fnType(dart.void, []),
+    [_fillRightLists]: dart.fnType(dart.void, []),
+    [_localeYear]: dart.fnType(core.String, []),
+    [_localeMonth]: dart.fnType(core.String, [core.int]),
+    [_localeDay]: dart.fnType(core.String, []),
+    finalTime: dart.fnType(core.DateTime, [])
+  }));
+  dart.setGetterSignature(date_model.DatePickerModel, () => ({
+    __proto__: dart.getGetters(date_model.DatePickerModel.__proto__),
+    maxTime: core.DateTime,
+    minTime: core.DateTime
+  }));
+  dart.setSetterSignature(date_model.DatePickerModel, () => ({
+    __proto__: dart.getSetters(date_model.DatePickerModel.__proto__),
+    maxTime: core.DateTime,
+    minTime: core.DateTime
+  }));
+  dart.setLibraryUri(date_model.DatePickerModel, I[0]);
+  dart.setFieldSignature(date_model.DatePickerModel, () => ({
+    __proto__: dart.getFields(date_model.DatePickerModel.__proto__),
+    [__DatePickerModel_maxTime]: dart.fieldType(dart.nullable(core.DateTime)),
+    [__DatePickerModel_maxTime_isSet]: dart.fieldType(core.bool),
+    [__DatePickerModel_minTime]: dart.fieldType(dart.nullable(core.DateTime)),
+    [__DatePickerModel_minTime_isSet]: dart.fieldType(core.bool)
+  }));
+  var showSecondsColumn$ = dart.privateName(date_model, "TimePickerModel.showSecondsColumn");
+  date_model.TimePickerModel = class TimePickerModel extends date_model.CommonPickerModel {
+    get showSecondsColumn() {
+      return this[showSecondsColumn$];
+    }
+    set showSecondsColumn(value) {
+      this[showSecondsColumn$] = value;
+    }
+    leftStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 390, 33, "index");
+      if (dart.notNull(index) >= 0 && dart.notNull(index) < 24) {
+        return date_format.digits(index, 2);
+      } else {
+        return null;
+      }
+    }
+    middleStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 399, 35, "index");
+      if (dart.notNull(index) >= 0 && dart.notNull(index) < 60) {
+        return date_format.digits(index, 2);
+      } else {
+        return null;
+      }
+    }
+    rightStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 408, 34, "index");
+      if (dart.notNull(index) >= 0 && dart.notNull(index) < 60) {
+        return date_format.digits(index, 2);
+      } else {
+        return null;
+      }
+    }
+    leftDivider() {
+      return ":";
+    }
+    rightDivider() {
+      if (dart.test(this.showSecondsColumn))
+        return ":";
+      else
+        return "";
+    }
+    layoutProportions() {
+      if (dart.test(this.showSecondsColumn))
+        return T.JSArrayOfint().of([1, 1, 1]);
+      else
+        return T.JSArrayOfint().of([1, 1, 0]);
+    }
+    finalTime() {
+      return dart.test(this.currentTime.isUtc) ? new core.DateTime.utc(this.currentTime.year, this.currentTime.month, this.currentTime.day, this[_currentLeftIndex], this[_currentMiddleIndex], this[_currentRightIndex]) : new core.DateTime.new(this.currentTime.year, this.currentTime.month, this.currentTime.day, this[_currentLeftIndex], this[_currentMiddleIndex], this[_currentRightIndex]);
+    }
+  };
+  (date_model.TimePickerModel.new = function(opts) {
+    let t10;
+    let currentTime = opts && 'currentTime' in opts ? opts.currentTime : null;
+    let locale = opts && 'locale' in opts ? opts.locale : null;
+    let showSecondsColumn = opts && 'showSecondsColumn' in opts ? opts.showSecondsColumn : true;
+    if (showSecondsColumn == null) dart.nullFailed(I[1], 380, 56, "showSecondsColumn");
+    this[showSecondsColumn$] = showSecondsColumn;
+    date_model.TimePickerModel.__proto__.new.call(this, {locale: locale});
+    this.currentTime = (t10 = currentTime, t10 == null ? new core.DateTime.now() : t10);
+    this[_currentLeftIndex] = this.currentTime.hour;
+    this[_currentMiddleIndex] = this.currentTime.minute;
+    this[_currentRightIndex] = this.currentTime.second;
+  }).prototype = date_model.TimePickerModel.prototype;
+  dart.addTypeTests(date_model.TimePickerModel);
+  dart.addTypeCaches(date_model.TimePickerModel);
+  dart.setMethodSignature(date_model.TimePickerModel, () => ({
+    __proto__: dart.getMethods(date_model.TimePickerModel.__proto__),
+    finalTime: dart.fnType(core.DateTime, [])
+  }));
+  dart.setLibraryUri(date_model.TimePickerModel, I[0]);
+  dart.setFieldSignature(date_model.TimePickerModel, () => ({
+    __proto__: dart.getFields(date_model.TimePickerModel.__proto__),
+    showSecondsColumn: dart.fieldType(core.bool)
+  }));
+  date_model.Time12hPickerModel = class Time12hPickerModel extends date_model.CommonPickerModel {
+    leftStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 459, 33, "index");
+      if (dart.notNull(index) >= 0 && dart.notNull(index) < 12) {
+        if (index === 0) {
+          return date_format.digits(12, 2);
+        } else {
+          return date_format.digits(index, 2);
+        }
+      } else {
+        return null;
+      }
+    }
+    middleStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 472, 35, "index");
+      if (dart.notNull(index) >= 0 && dart.notNull(index) < 60) {
+        return date_format.digits(index, 2);
+      } else {
+        return null;
+      }
+    }
+    rightStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 481, 34, "index");
+      if (index === 0) {
+        return T.StringN().as(i18n_model.i18nObjInLocale(this.locale)[$_get]("am"));
+      } else if (index === 1) {
+        return T.StringN().as(i18n_model.i18nObjInLocale(this.locale)[$_get]("pm"));
+      } else {
+        return null;
+      }
+    }
+    leftDivider() {
+      return ":";
+    }
+    rightDivider() {
+      return ":";
+    }
+    layoutProportions() {
+      return T.JSArrayOfint().of([1, 1, 1]);
+    }
+    finalTime() {
+      let hour = dart.notNull(this[_currentLeftIndex]) + 12 * dart.notNull(this[_currentRightIndex]);
+      return dart.test(this.currentTime.isUtc) ? new core.DateTime.utc(this.currentTime.year, this.currentTime.month, this.currentTime.day, hour, this[_currentMiddleIndex], 0) : new core.DateTime.new(this.currentTime.year, this.currentTime.month, this.currentTime.day, hour, this[_currentMiddleIndex], 0);
+    }
+  };
+  (date_model.Time12hPickerModel.new = function(opts) {
+    let t10;
+    let currentTime = opts && 'currentTime' in opts ? opts.currentTime : null;
+    let locale = opts && 'locale' in opts ? opts.locale : null;
+    date_model.Time12hPickerModel.__proto__.new.call(this, {locale: locale});
+    this.currentTime = (t10 = currentTime, t10 == null ? new core.DateTime.now() : t10);
+    this[_currentLeftIndex] = this.currentTime.hour[$modulo](12);
+    this[_currentMiddleIndex] = this.currentTime.minute;
+    this[_currentRightIndex] = dart.notNull(this.currentTime.hour) < 12 ? 0 : 1;
+  }).prototype = date_model.Time12hPickerModel.prototype;
+  dart.addTypeTests(date_model.Time12hPickerModel);
+  dart.addTypeCaches(date_model.Time12hPickerModel);
+  dart.setMethodSignature(date_model.Time12hPickerModel, () => ({
+    __proto__: dart.getMethods(date_model.Time12hPickerModel.__proto__),
+    finalTime: dart.fnType(core.DateTime, [])
+  }));
+  dart.setLibraryUri(date_model.Time12hPickerModel, I[0]);
+  var maxTime$ = dart.privateName(date_model, "DateTimePickerModel.maxTime");
+  var minTime$ = dart.privateName(date_model, "DateTimePickerModel.minTime");
+  date_model.DateTimePickerModel = class DateTimePickerModel extends date_model.CommonPickerModel {
+    get maxTime() {
+      return this[maxTime$];
+    }
+    set maxTime(value) {
+      this[maxTime$] = value;
+    }
+    get minTime() {
+      return this[minTime$];
+    }
+    set minTime(value) {
+      this[minTime$] = value;
+    }
+    isAtSameDay(day1, day2) {
+      return day1 != null && day2 != null && day1.difference(day2).inDays === 0 && day1.day == day2.day;
+    }
+    setLeftIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 580, 25, "index");
+      super.setLeftIndex(index);
+      let time = this.currentTime.add(new core.Duration.new({days: index}));
+      if (dart.test(this.isAtSameDay(this.minTime, time))) {
+        let index = math.min(core.int, 24 - dart.notNull(dart.nullCheck(this.minTime).hour) - 1, this[_currentMiddleIndex]);
+        this.setMiddleIndex(index);
+      } else if (dart.test(this.isAtSameDay(this.maxTime, time))) {
+        let index = math.min(core.int, dart.nullCheck(this.maxTime).hour, this[_currentMiddleIndex]);
+        this.setMiddleIndex(index);
+      }
+    }
+    setMiddleIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 593, 27, "index");
+      super.setMiddleIndex(index);
+      let time = this.currentTime.add(new core.Duration.new({days: this[_currentLeftIndex]}));
+      if (dart.test(this.isAtSameDay(this.minTime, time)) && index === 0) {
+        let maxIndex = 60 - dart.notNull(dart.nullCheck(this.minTime).minute) - 1;
+        if (dart.notNull(this[_currentRightIndex]) > maxIndex) {
+          this[_currentRightIndex] = maxIndex;
+        }
+      } else if (dart.test(this.isAtSameDay(this.maxTime, time)) && this[_currentMiddleIndex] == dart.nullCheck(this.maxTime).hour) {
+        let maxIndex = dart.nullCheck(this.maxTime).minute;
+        if (dart.notNull(this[_currentRightIndex]) > dart.notNull(maxIndex)) {
+          this[_currentRightIndex] = maxIndex;
+        }
+      }
+    }
+    leftStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 611, 33, "index");
+      let time = this.currentTime.add(new core.Duration.new({days: index}));
+      if (this.minTime != null && dart.test(time.isBefore(dart.nullCheck(this.minTime))) && !dart.test(this.isAtSameDay(dart.nullCheck(this.minTime), time))) {
+        return null;
+      } else if (this.maxTime != null && dart.test(time.isAfter(dart.nullCheck(this.maxTime))) && !dart.test(this.isAtSameDay(this.maxTime, time))) {
+        return null;
+      }
+      return date_format.formatDate(time, T.JSArrayOfString().of(["ymdw"]), this.locale);
+    }
+    middleStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 626, 35, "index");
+      if (dart.notNull(index) >= 0 && dart.notNull(index) < 24) {
+        let time = this.currentTime.add(new core.Duration.new({days: this[_currentLeftIndex]}));
+        if (dart.test(this.isAtSameDay(this.minTime, time))) {
+          if (dart.notNull(index) >= 0 && dart.notNull(index) < 24 - dart.notNull(dart.nullCheck(this.minTime).hour)) {
+            return date_format.digits(dart.notNull(dart.nullCheck(this.minTime).hour) + dart.notNull(index), 2);
+          } else {
+            return null;
+          }
+        } else if (dart.test(this.isAtSameDay(this.maxTime, time))) {
+          if (dart.notNull(index) >= 0 && dart.notNull(index) <= dart.notNull(dart.nullCheck(this.maxTime).hour)) {
+            return date_format.digits(index, 2);
+          } else {
+            return null;
+          }
+        }
+        return date_format.digits(index, 2);
+      }
+      return null;
+    }
+    rightStringAtIndex(index) {
+      if (index == null) dart.nullFailed(I[1], 649, 34, "index");
+      if (dart.notNull(index) >= 0 && dart.notNull(index) < 60) {
+        let time = this.currentTime.add(new core.Duration.new({days: this[_currentLeftIndex]}));
+        if (dart.test(this.isAtSameDay(this.minTime, time)) && this[_currentMiddleIndex] === 0) {
+          if (dart.notNull(index) >= 0 && dart.notNull(index) < 60 - dart.notNull(dart.nullCheck(this.minTime).minute)) {
+            return date_format.digits(dart.notNull(dart.nullCheck(this.minTime).minute) + dart.notNull(index), 2);
+          } else {
+            return null;
+          }
+        } else if (dart.test(this.isAtSameDay(this.maxTime, time)) && dart.notNull(this[_currentMiddleIndex]) >= dart.notNull(dart.nullCheck(this.maxTime).hour)) {
+          if (dart.notNull(index) >= 0 && dart.notNull(index) <= dart.notNull(dart.nullCheck(this.maxTime).minute)) {
+            return date_format.digits(index, 2);
+          } else {
+            return null;
+          }
+        }
+        return date_format.digits(index, 2);
+      }
+      return null;
+    }
+    finalTime() {
+      let time = this.currentTime.add(new core.Duration.new({days: this[_currentLeftIndex]}));
+      let hour = this[_currentMiddleIndex];
+      let minute = this[_currentRightIndex];
+      if (dart.test(this.isAtSameDay(this.minTime, time))) {
+        hour = dart.notNull(hour) + dart.notNull(dart.nullCheck(this.minTime).hour);
+        if (dart.nullCheck(this.minTime).hour == hour) {
+          minute = dart.notNull(minute) + dart.notNull(dart.nullCheck(this.minTime).minute);
+        }
+      }
+      return dart.test(this.currentTime.isUtc) ? new core.DateTime.utc(time.year, time.month, time.day, hour, minute) : new core.DateTime.new(time.year, time.month, time.day, hour, minute);
+    }
+    layoutProportions() {
+      return T.JSArrayOfint().of([4, 1, 1]);
+    }
+    rightDivider() {
+      return ":";
+    }
+  };
+  (date_model.DateTimePickerModel.new = function(opts) {
+    let currentTime = opts && 'currentTime' in opts ? opts.currentTime : null;
+    let maxTime = opts && 'maxTime' in opts ? opts.maxTime : null;
+    let minTime = opts && 'minTime' in opts ? opts.minTime : null;
+    let locale = opts && 'locale' in opts ? opts.locale : null;
+    this[maxTime$] = null;
+    this[minTime$] = null;
+    date_model.DateTimePickerModel.__proto__.new.call(this, {locale: locale});
+    if (currentTime != null) {
+      this.currentTime = currentTime;
+      if (maxTime != null && (dart.test(currentTime.isBefore(maxTime)) || dart.test(currentTime.isAtSameMomentAs(maxTime)))) {
+        this.maxTime = maxTime;
+      }
+      if (minTime != null && (dart.test(currentTime.isAfter(minTime)) || dart.test(currentTime.isAtSameMomentAs(minTime)))) {
+        this.minTime = minTime;
+      }
+    } else {
+      this.maxTime = maxTime;
+      this.minTime = minTime;
+      let now = new core.DateTime.now();
+      if (this.minTime != null && dart.test(dart.nullCheck(this.minTime).isAfter(now))) {
+        this.currentTime = dart.nullCheck(this.minTime);
+      } else if (this.maxTime != null && dart.test(dart.nullCheck(this.maxTime).isBefore(now))) {
+        this.currentTime = dart.nullCheck(this.maxTime);
+      } else {
+        this.currentTime = now;
+      }
+    }
+    if (this.minTime != null && this.maxTime != null && dart.test(dart.nullCheck(this.maxTime).isBefore(dart.nullCheck(this.minTime)))) {
+      this.minTime = null;
+      this.maxTime = null;
+    }
+    this[_currentLeftIndex] = 0;
+    this[_currentMiddleIndex] = this.currentTime.hour;
+    this[_currentRightIndex] = this.currentTime.minute;
+    if (this.minTime != null && dart.test(this.isAtSameDay(dart.nullCheck(this.minTime), this.currentTime))) {
+      this[_currentMiddleIndex] = dart.notNull(this.currentTime.hour) - dart.notNull(dart.nullCheck(this.minTime).hour);
+      if (this[_currentMiddleIndex] === 0) {
+        this[_currentRightIndex] = dart.notNull(this.currentTime.minute) - dart.notNull(dart.nullCheck(this.minTime).minute);
+      }
+    }
+  }).prototype = date_model.DateTimePickerModel.prototype;
+  dart.addTypeTests(date_model.DateTimePickerModel);
+  dart.addTypeCaches(date_model.DateTimePickerModel);
+  dart.setMethodSignature(date_model.DateTimePickerModel, () => ({
+    __proto__: dart.getMethods(date_model.DateTimePickerModel.__proto__),
+    isAtSameDay: dart.fnType(core.bool, [dart.nullable(core.DateTime), dart.nullable(core.DateTime)]),
+    finalTime: dart.fnType(core.DateTime, [])
+  }));
+  dart.setLibraryUri(date_model.DateTimePickerModel, I[0]);
+  dart.setFieldSignature(date_model.DateTimePickerModel, () => ({
+    __proto__: dart.getFields(date_model.DateTimePickerModel.__proto__),
+    maxTime: dart.fieldType(dart.nullable(core.DateTime)),
+    minTime: dart.fieldType(dart.nullable(core.DateTime))
+  }));
+  dart.trackLibraries("packages/flutter_datetime_picker/src/date_model.dart", {
+    "package:flutter_datetime_picker/src/date_model.dart": date_model
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["date_model.dart"],"names":[],"mappings":"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","file":"../../../../../../../../packages/flutter_datetime_picker/src/date_model.dart.lib.js"}');
+  // Exports:
+  return {
+    src__date_model: date_model
+  };
+}));
+
+//# sourceMappingURL=date_model.dart.lib.js.map

@@ -1,0 +1,332 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/path_drawing/src/parse_path.dart', 'packages/flutter/src/services/system_channels.dart', 'packages/flutter/src/rendering/custom_paint.dart', 'packages/flutter/src/foundation/change_notifier.dart'], (function load__packages__flutterapp__helpers__svg__svg_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__path_drawing__src__parse_path$46dart, packages__flutter__src__services__system_channels$46dart, packages__flutter__src__rendering__custom_paint$46dart, packages__flutter__src__foundation__change_notifier$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const ui = dart_sdk.ui;
+  const typed_data = dart_sdk.typed_data;
+  const _native_typed_data = dart_sdk._native_typed_data;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const parse_path = packages__path_drawing__src__parse_path$46dart.src__parse_path;
+  const asset_bundle = packages__flutter__src__services__system_channels$46dart.src__services__asset_bundle;
+  const custom_paint = packages__flutter__src__rendering__custom_paint$46dart.src__rendering__custom_paint;
+  const change_notifier = packages__flutter__src__foundation__change_notifier$46dart.src__foundation__change_notifier;
+  var svg = Object.create(dart.library);
+  var $add = dartx.add;
+  var $buffer = dartx.buffer;
+  var $forEach = dartx.forEach;
+  var $contains = dartx.contains;
+  var $remove = dartx.remove;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    PathL: () => (T.PathL = dart.constFn(dart.legacy(ui.Path)))(),
+    JSArrayOfPathL: () => (T.JSArrayOfPathL = dart.constFn(_interceptors.JSArray$(T.PathL())))(),
+    doubleL: () => (T.doubleL = dart.constFn(dart.legacy(core.double)))(),
+    JSArrayOfdoubleL: () => (T.JSArrayOfdoubleL = dart.constFn(_interceptors.JSArray$(T.doubleL())))(),
+    PathLTovoid: () => (T.PathLTovoid = dart.constFn(dart.fnType(dart.void, [T.PathL()])))(),
+    NotifierL: () => (T.NotifierL = dart.constFn(dart.legacy(svg.Notifier)))(),
+    SvgPathPainterL: () => (T.SvgPathPainterL = dart.constFn(dart.legacy(svg.SvgPathPainter)))(),
+    SvgPathPainterLToNotifierL: () => (T.SvgPathPainterLToNotifierL = dart.constFn(dart.fnType(T.NotifierL(), [T.SvgPathPainterL()])))(),
+    SvgPathsPainterL: () => (T.SvgPathsPainterL = dart.constFn(dart.legacy(svg.SvgPathsPainter)))(),
+    SvgPathPainterLTovoid: () => (T.SvgPathPainterLTovoid = dart.constFn(dart.fnType(dart.void, [T.SvgPathPainterL()])))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    VoidToLvoid: () => (T.VoidToLvoid = dart.constFn(dart.legacy(T.VoidTovoid())))(),
+    JSArrayOfVoidToLvoid: () => (T.JSArrayOfVoidToLvoid = dart.constFn(_interceptors.JSArray$(T.VoidToLvoid())))(),
+    FnTovoid: () => (T.FnTovoid = dart.constFn(dart.fnType(dart.void, [T.VoidToLvoid()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "painter",
+        [_Location_column]: 19,
+        [_Location_line]: 17,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 7,
+        [_Location_line]: 17,
+        [_Location_file]: "file:///D:/VetAppo/lib/helpers/svg/svg.dart"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294967295.0
+      });
+    }
+  }, false);
+  var C = Array(4).fill(void 0);
+  var I = ["package:flutterapp/helpers/svg/svg.dart"];
+  var painters$ = dart.privateName(svg, "SvgWidget.painters");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  svg.SvgWidget = class SvgWidget extends framework.StatelessWidget {
+    get painters() {
+      return this[painters$];
+    }
+    set painters(value) {
+      super.painters = value;
+    }
+    build(context) {
+      return new basic.CustomPaint.new({painter: new svg.SvgPathsPainter.new(this.painters, new svg.Notifier.new()), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0});
+    }
+  };
+  (svg.SvgWidget.new = function(opts) {
+    let painters = opts && 'painters' in opts ? opts.painters : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[painters$] = painters;
+    svg.SvgWidget.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = svg.SvgWidget.prototype;
+  dart.addTypeTests(svg.SvgWidget);
+  dart.addTypeCaches(svg.SvgWidget);
+  dart.setMethodSignature(svg.SvgWidget, () => ({
+    __proto__: dart.getMethods(svg.SvgWidget.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(svg.SvgWidget, I[0]);
+  dart.setFieldSignature(svg.SvgWidget, () => ({
+    __proto__: dart.getFields(svg.SvgWidget.__proto__),
+    painters: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(svg.SvgPathPainter))))
+  }));
+  var repaint = dart.privateName(svg, "SvgPathPainter.repaint");
+  var _paths = dart.privateName(svg, "_paths");
+  var _clipPath = dart.privateName(svg, "_clipPath");
+  var _paint$ = dart.privateName(svg, "_paint");
+  var Color_value = dart.privateName(ui, "Color.value");
+  var _notifyIsReady = dart.privateName(svg, "_notifyIsReady");
+  svg.SvgPathPainter = class SvgPathPainter extends core.Object {
+    get repaint() {
+      return this[repaint];
+    }
+    set repaint(value) {
+      this[repaint] = value;
+    }
+    static fill() {
+      let t0;
+      let paint = (t0 = ui.Paint.new(), (() => {
+        t0.style = ui.PaintingStyle.fill;
+        return t0;
+      })());
+      return new svg.SvgPathPainter.__(paint);
+    }
+    static stroke(strokeWidth, opts) {
+      let t0;
+      let strokeCap = opts && 'strokeCap' in opts ? opts.strokeCap : null;
+      let strokeJoin = opts && 'strokeJoin' in opts ? opts.strokeJoin : null;
+      let strokeMiterLimit = opts && 'strokeMiterLimit' in opts ? opts.strokeMiterLimit : null;
+      let paint = (t0 = ui.Paint.new(), (() => {
+        t0.style = ui.PaintingStyle.fill;
+        t0.strokeWidth = strokeWidth;
+        return t0;
+      })());
+      if (strokeCap != null) {
+        paint.strokeCap = strokeCap;
+      }
+      if (strokeJoin != null) {
+        paint.strokeJoin = strokeJoin;
+      }
+      if (strokeMiterLimit != null) {
+        paint.strokeMiterLimit = strokeMiterLimit;
+      }
+      return new svg.SvgPathPainter.__(paint);
+    }
+    addPath(path) {
+      return this[_paths][$add](parse_path.parseSvgPathData(path));
+    }
+    addClipPath(path) {
+      this[_clipPath] == null ? this[_clipPath] = ui.Path.new() : null;
+      this[_clipPath].extendWithPath(parse_path.parseSvgPathData(path), ui.Offset.zero);
+    }
+    set color(color) {
+      this[_paint$].color = color;
+    }
+    setLinearGradient(opts) {
+      let startX = opts && 'startX' in opts ? opts.startX : null;
+      let startY = opts && 'startY' in opts ? opts.startY : null;
+      let endX = opts && 'endX' in opts ? opts.endX : null;
+      let endY = opts && 'endY' in opts ? opts.endY : null;
+      let colors = opts && 'colors' in opts ? opts.colors : null;
+      let colorStops = opts && 'colorStops' in opts ? opts.colorStops : null;
+      this[_paint$].shader = ui.Gradient.linear(new ui.Offset.new(startX, startY), new ui.Offset.new(endX, endY), colors, colorStops);
+    }
+    setRadialGradient(opts) {
+      let centerX = opts && 'centerX' in opts ? opts.centerX : null;
+      let centerY = opts && 'centerY' in opts ? opts.centerY : null;
+      let radius = opts && 'radius' in opts ? opts.radius : null;
+      let colors = opts && 'colors' in opts ? opts.colors : null;
+      let colorStops = opts && 'colorStops' in opts ? opts.colorStops : null;
+      this[_paint$].shader = ui.Gradient.radial(new ui.Offset.new(centerX, centerY), radius, colors, colorStops);
+    }
+    setSweepGradient(opts) {
+      let centerX = opts && 'centerX' in opts ? opts.centerX : null;
+      let centerY = opts && 'centerY' in opts ? opts.centerY : null;
+      let colors = opts && 'colors' in opts ? opts.colors : null;
+      let colorStops = opts && 'colorStops' in opts ? opts.colorStops : null;
+      let startAngle = opts && 'startAngle' in opts ? opts.startAngle : null;
+      let endAngle = opts && 'endAngle' in opts ? opts.endAngle : null;
+      this[_paint$].shader = ui.Gradient.sweep(new ui.Offset.new(centerX, centerY), colors, colorStops, ui.TileMode.clamp, startAngle, endAngle);
+    }
+    setBlur(sigma) {
+      this[_paint$].maskFilter = new ui.MaskFilter.blur(ui.BlurStyle.inner, sigma);
+    }
+    setImage(opts) {
+      let imageAssetPath = opts && 'imageAssetPath' in opts ? opts.imageAssetPath : null;
+      let opacity = opts && 'opacity' in opts ? opts.opacity : null;
+      return async.async(dart.void, (function* setImage() {
+        let t0;
+        let data = (yield asset_bundle.rootBundle.load(imageAssetPath));
+        let codec = (yield ui.instantiateImageCodec(typed_data.Uint8List.view(data[$buffer])));
+        let frameInfo = (yield codec.getNextFrame());
+        this[_paint$].color = (C[3] || CT.C3).withOpacity((t0 = opacity, t0 == null ? 1.0 : t0));
+        this[_paint$].shader = ui.ImageShader.new(frameInfo.image, ui.TileMode.repeated, ui.TileMode.repeated, _native_typed_data.NativeFloat64List.fromList(T.JSArrayOfdoubleL().of([1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0])));
+        this[_notifyIsReady]();
+      }).bind(this));
+    }
+    [_notifyIsReady]() {
+      let t0;
+      t0 = this.repaint;
+      t0 == null ? null : t0.notify();
+    }
+    draw(canvas) {
+      if (this[_clipPath] != null) {
+        canvas.clipPath(this[_clipPath]);
+      }
+      this[_paths][$forEach](dart.fn(element => canvas.drawPath(element, this[_paint$]), T.PathLTovoid()));
+    }
+  };
+  (svg.SvgPathPainter.__ = function(_paint) {
+    this[repaint] = null;
+    this[_paths] = T.JSArrayOfPathL().of([]);
+    this[_clipPath] = null;
+    this[_paint$] = _paint;
+    ;
+  }).prototype = svg.SvgPathPainter.prototype;
+  dart.addTypeTests(svg.SvgPathPainter);
+  dart.addTypeCaches(svg.SvgPathPainter);
+  dart.setMethodSignature(svg.SvgPathPainter, () => ({
+    __proto__: dart.getMethods(svg.SvgPathPainter.__proto__),
+    addPath: dart.fnType(dart.void, [dart.legacy(core.String)]),
+    addClipPath: dart.fnType(dart.void, [dart.legacy(core.String)]),
+    setLinearGradient: dart.fnType(dart.void, [], {colorStops: dart.legacy(core.List$(dart.legacy(core.double))), colors: dart.legacy(core.List$(dart.legacy(ui.Color))), endX: dart.legacy(core.double), endY: dart.legacy(core.double), startX: dart.legacy(core.double), startY: dart.legacy(core.double)}, {}),
+    setRadialGradient: dart.fnType(dart.void, [], {centerX: dart.legacy(core.double), centerY: dart.legacy(core.double), colorStops: dart.legacy(core.List$(dart.legacy(core.double))), colors: dart.legacy(core.List$(dart.legacy(ui.Color))), radius: dart.legacy(core.double)}, {}),
+    setSweepGradient: dart.fnType(dart.void, [], {centerX: dart.legacy(core.double), centerY: dart.legacy(core.double), colorStops: dart.legacy(core.List$(dart.legacy(core.double))), colors: dart.legacy(core.List$(dart.legacy(ui.Color))), endAngle: dart.legacy(core.double), startAngle: dart.legacy(core.double)}, {}),
+    setBlur: dart.fnType(dart.void, [dart.legacy(core.double)]),
+    setImage: dart.fnType(dart.legacy(async.Future$(dart.void)), [], {imageAssetPath: dart.legacy(core.String), opacity: dart.legacy(core.double)}, {}),
+    [_notifyIsReady]: dart.fnType(dart.void, []),
+    draw: dart.fnType(dart.void, [dart.legacy(ui.Canvas)])
+  }));
+  dart.setSetterSignature(svg.SvgPathPainter, () => ({
+    __proto__: dart.getSetters(svg.SvgPathPainter.__proto__),
+    color: dart.legacy(ui.Color)
+  }));
+  dart.setLibraryUri(svg.SvgPathPainter, I[0]);
+  dart.setFieldSignature(svg.SvgPathPainter, () => ({
+    __proto__: dart.getFields(svg.SvgPathPainter.__proto__),
+    repaint: dart.fieldType(dart.legacy(svg.Notifier)),
+    [_paths]: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(ui.Path)))),
+    [_clipPath]: dart.fieldType(dart.legacy(ui.Path)),
+    [_paint$]: dart.finalFieldType(dart.legacy(ui.Paint))
+  }));
+  var _painters = dart.privateName(svg, "_painters");
+  svg.SvgPathsPainter = class SvgPathsPainter extends custom_paint.CustomPainter {
+    shouldRepaint(oldDelegate) {
+      T.SvgPathsPainterL().as(oldDelegate);
+      return true;
+    }
+    paint(canvas, size) {
+      let t0;
+      t0 = this[_painters];
+      t0 == null ? null : t0[$forEach](dart.fn(element => element.draw(canvas), T.SvgPathPainterLTovoid()));
+    }
+  };
+  (svg.SvgPathsPainter.new = function(painters, repaint) {
+    this[_painters] = painters;
+    svg.SvgPathsPainter.__proto__.new.call(this, {repaint: repaint});
+    painters[$forEach](dart.fn(element => element.repaint = repaint, T.SvgPathPainterLToNotifierL()));
+  }).prototype = svg.SvgPathsPainter.prototype;
+  dart.addTypeTests(svg.SvgPathsPainter);
+  dart.addTypeCaches(svg.SvgPathsPainter);
+  dart.setMethodSignature(svg.SvgPathsPainter, () => ({
+    __proto__: dart.getMethods(svg.SvgPathsPainter.__proto__),
+    shouldRepaint: dart.fnType(dart.legacy(core.bool), [dart.legacy(core.Object)]),
+    paint: dart.fnType(dart.void, [dart.legacy(ui.Canvas), dart.legacy(ui.Size)])
+  }));
+  dart.setLibraryUri(svg.SvgPathsPainter, I[0]);
+  dart.setFieldSignature(svg.SvgPathsPainter, () => ({
+    __proto__: dart.getFields(svg.SvgPathsPainter.__proto__),
+    [_painters]: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(svg.SvgPathPainter))))
+  }));
+  var _listeners = dart.privateName(svg, "_listeners");
+  svg.Notifier = class Notifier extends change_notifier.Listenable {
+    addListener(listener) {
+      if (!dart.test(this[_listeners][$contains](listener))) {
+        this[_listeners][$add](listener);
+      }
+    }
+    removeListener(listener) {
+      this[_listeners][$remove](listener);
+    }
+    notify() {
+      this[_listeners][$forEach](dart.fn(element => element(), T.FnTovoid()));
+    }
+  };
+  (svg.Notifier.new = function() {
+    this[_listeners] = T.JSArrayOfVoidToLvoid().of([]);
+    svg.Notifier.__proto__.new.call(this);
+    ;
+  }).prototype = svg.Notifier.prototype;
+  dart.addTypeTests(svg.Notifier);
+  dart.addTypeCaches(svg.Notifier);
+  dart.setMethodSignature(svg.Notifier, () => ({
+    __proto__: dart.getMethods(svg.Notifier.__proto__),
+    addListener: dart.fnType(dart.void, [dart.legacy(dart.fnType(dart.void, []))]),
+    removeListener: dart.fnType(dart.void, [dart.legacy(dart.fnType(dart.void, []))]),
+    notify: dart.fnType(dart.void, [])
+  }));
+  dart.setLibraryUri(svg.Notifier, I[0]);
+  dart.setFieldSignature(svg.Notifier, () => ({
+    __proto__: dart.getFields(svg.Notifier.__proto__),
+    [_listeners]: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(dart.fnType(dart.void, [])))))
+  }));
+  dart.trackLibraries("packages/flutterapp/helpers/svg/svg.dart", {
+    "package:flutterapp/helpers/svg/svg.dart": svg
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["svg.dart"],"names":[],"mappings":"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","file":"../../../../packages/flutterapp/helpers/svg/svg.dart.lib.js"}');
+  // Exports:
+  return {
+    helpers__svg__svg: svg
+  };
+}));
+
+//# sourceMappingURL=svg.dart.lib.js.map

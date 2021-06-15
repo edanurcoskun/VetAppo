@@ -1,0 +1,373 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/rendering/stack.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/rendering/paragraph.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/material/text_field.dart', 'packages/flutter/src/services/text_input.dart', 'packages/flutterapp/models/Appointment.dart', 'packages/flutter/src/services/text_formatter.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/input_border.dart', 'packages/flutter/src/material/colors.dart'], (function load__packages__flutterapp__vetappoapp__generatedappo_third_page_userwidget__generated__GeneratedNameWidget_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__rendering__stack$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__rendering__paragraph$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__material__text_field$46dart, packages__flutter__src__services__text_input$46dart, packages__flutterapp__models__Appointment$46dart, packages__flutter__src__services__text_formatter$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__input_border$46dart, packages__flutter__src__material__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const editable_text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__editable_text;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const stack = packages__flutter__src__rendering__stack$46dart.src__rendering__stack;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const paragraph = packages__flutter__src__rendering__paragraph$46dart.src__rendering__paragraph;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const text_field = packages__flutter__src__material__text_field$46dart.src__material__text_field;
+  const text_input = packages__flutter__src__services__text_input$46dart.src__services__text_input;
+  const Appointment = packages__flutterapp__models__Appointment$46dart.models__Appointment;
+  const text_formatter = packages__flutter__src__services__text_formatter$46dart.src__services__text_formatter;
+  const input_decorator = packages__flutter__src__material__icon_button$46dart.src__material__input_decorator;
+  const input_border = packages__flutter__src__material__input_border$46dart.src__material__input_border;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  var GeneratedNameWidget = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    StringLToNull: () => (T.StringLToNull = dart.constFn(dart.fnType(core.Null, [T.StringL()])))(),
+    TextInputFormatterL: () => (T.TextInputFormatterL = dart.constFn(dart.legacy(text_formatter.TextInputFormatter)))(),
+    JSArrayOfTextInputFormatterL: () => (T.JSArrayOfTextInputFormatterL = dart.constFn(_interceptors.JSArray$(T.TextInputFormatterL())))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 13,
+        [_Location_line]: 21,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "overflow",
+        [_Location_column]: 13,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textAlign",
+        [_Location_column]: 13,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 13,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4, C[5] || CT.C5], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 20,
+        [_Location_file]: "file:///D:/VetAppo/lib/vetappoapp/generatedappo_third_page_userwidget/generated/GeneratedNameWidget.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 17,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textCapitalization",
+        [_Location_column]: 17,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChanged",
+        [_Location_column]: 17,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "autocorrect",
+        [_Location_column]: 17,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "inputFormatters",
+        [_Location_column]: 17,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textInputAction",
+        [_Location_column]: 17,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "keyboardType",
+        [_Location_column]: 17,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 17,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9, C[10] || CT.C10, C[11] || CT.C11, C[12] || CT.C12, C[13] || CT.C13, C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 34,
+        [_Location_file]: "file:///D:/VetAppo/lib/vetappoapp/generatedappo_third_page_userwidget/generated/GeneratedNameWidget.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 15,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19, C[20] || CT.C20], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///D:/VetAppo/lib/vetappoapp/generatedappo_third_page_userwidget/generated/GeneratedNameWidget.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fit",
+        [_Location_column]: 13,
+        [_Location_line]: 16,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 13,
+        [_Location_line]: 17,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "clipBehavior",
+        [_Location_column]: 13,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.constList([C[23] || CT.C23, C[24] || CT.C24, C[25] || CT.C25, C[26] || CT.C26], T._LocationL());
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[22] || CT.C22,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 15,
+        [_Location_file]: "file:///D:/VetAppo/lib/vetappoapp/generatedappo_third_page_userwidget/generated/GeneratedNameWidget.dart"
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 15,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.constList([C[29] || CT.C29], T._LocationL());
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[28] || CT.C28,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 14,
+        [_Location_file]: "file:///D:/VetAppo/lib/vetappoapp/generatedappo_third_page_userwidget/generated/GeneratedNameWidget.dart"
+      });
+    }
+  }, false);
+  var C = Array(30).fill(void 0);
+  var I = ["package:flutterapp/vetappoapp/generatedappo_third_page_userwidget/generated/GeneratedNameWidget.dart"];
+  GeneratedNameWidget.GeneratedNameWidget = class GeneratedNameWidget$ extends framework.StatefulWidget {
+    createState() {
+      return new GeneratedNameWidget._GeneratedNameWidget.new();
+    }
+  };
+  (GeneratedNameWidget.GeneratedNameWidget.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    GeneratedNameWidget.GeneratedNameWidget.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = GeneratedNameWidget.GeneratedNameWidget.prototype;
+  dart.addTypeTests(GeneratedNameWidget.GeneratedNameWidget);
+  dart.addTypeCaches(GeneratedNameWidget.GeneratedNameWidget);
+  dart.setMethodSignature(GeneratedNameWidget.GeneratedNameWidget, () => ({
+    __proto__: dart.getMethods(GeneratedNameWidget.GeneratedNameWidget.__proto__),
+    createState: dart.fnType(dart.legacy(GeneratedNameWidget._GeneratedNameWidget), [])
+  }));
+  dart.setLibraryUri(GeneratedNameWidget.GeneratedNameWidget, I[0]);
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  GeneratedNameWidget._GeneratedNameWidget = class _GeneratedNameWidget extends framework.State$(dart.legacy(GeneratedNameWidget.GeneratedNameWidget)) {
+    build(context) {
+      return new container.Container.new({child: new basic.Stack.new({fit: stack.StackFit.expand, alignment: alignment.Alignment.center, clipBehavior: ui.Clip.none, children: T.JSArrayOfWidgetL().of([new text.Text.new("Name : ", {overflow: paragraph.TextOverflow.visible, textAlign: ui.TextAlign.left, style: new text_style.TextStyle.new({height: 1.171875, fontSize: 22.0, fontFamily: "Roboto", fontWeight: ui.FontWeight.w400, color: new ui.Color.fromARGB(255, 0, 0, 0)}), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new container.Container.new({padding: new edge_insets.EdgeInsets.only({top: 25.0}), child: new text_field.TextField.new({controller: this.myController, textCapitalization: text_input.TextCapitalization.sentences, onChanged: dart.fn(text => {
+                  Appointment.createAnotherName(this.myController.text);
+                }, T.StringLToNull()), autocorrect: false, inputFormatters: T.JSArrayOfTextInputFormatterL().of([new text_formatter.FilteringTextInputFormatter.deny(core.RegExp.new("[0-9]"))]), textInputAction: text_input.TextInputAction.next, keyboardType: text_input.TextInputType.visiblePassword, decoration: new input_decorator.InputDecoration.new({fillColor: new ui.Color.fromARGB(150, 255, 255, 255), filled: true, border: new input_border.OutlineInputBorder.new(), contentPadding: new edge_insets.EdgeInsets.fromLTRB(20.0, 10.0, 0.0, 0.0)}), style: new text_style.TextStyle.new({fontSize: 22.0, color: colors.Colors.black}), $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17})]), $creationLocationd_0dea112b090073317d4: C[21] || CT.C21}), $creationLocationd_0dea112b090073317d4: C[27] || CT.C27});
+    }
+  };
+  (GeneratedNameWidget._GeneratedNameWidget.new = function() {
+    this.myController = new editable_text.TextEditingController.new();
+    GeneratedNameWidget._GeneratedNameWidget.__proto__.new.call(this);
+    ;
+  }).prototype = GeneratedNameWidget._GeneratedNameWidget.prototype;
+  dart.addTypeTests(GeneratedNameWidget._GeneratedNameWidget);
+  dart.addTypeCaches(GeneratedNameWidget._GeneratedNameWidget);
+  dart.setMethodSignature(GeneratedNameWidget._GeneratedNameWidget, () => ({
+    __proto__: dart.getMethods(GeneratedNameWidget._GeneratedNameWidget.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(GeneratedNameWidget._GeneratedNameWidget, I[0]);
+  dart.setFieldSignature(GeneratedNameWidget._GeneratedNameWidget, () => ({
+    __proto__: dart.getFields(GeneratedNameWidget._GeneratedNameWidget.__proto__),
+    myController: dart.finalFieldType(dart.legacy(editable_text.TextEditingController))
+  }));
+  dart.trackLibraries("packages/flutterapp/vetappoapp/generatedappo_third_page_userwidget/generated/GeneratedNameWidget.dart", {
+    "package:flutterapp/vetappoapp/generatedappo_third_page_userwidget/generated/GeneratedNameWidget.dart": GeneratedNameWidget
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["GeneratedNameWidget.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAMwC;IAAsB;;;;;;EAC9D;;;;;;;;;;;;;;UAK4B;AACxB,YAAO,qCACI,0BACW,kCACO,0CACF,wBACT,yBACZ,kBACE,sBACuB,2CACF,0BACd,sCACG,oBACE,kBACE,sBACW,2BACV,sBAAS,KAAK,GAAG,GAAG,+DAGrC,sCACwB,sCAAU,eACvB,0CACO,uCAC2B,oDAC5B,QAAC;AAC0B,kBAApC,8BAAkB,AAAa;oDAEpB,wBACwB,qCACP,oDAAK,gBAAO,8BAET,+CACL,sDAChB,oDACO,sBAAS,KAAK,KAAK,KAAK,cACjC,cACA,2DACmB,oCAAS,MAAI,MAAI,KAAG,eAE1C,wCACK,aACI;IAI9B;;;IA/CM,oBAAe;;;EAgDvB","file":"../../../../../packages/flutterapp/vetappoapp/generatedappo_third_page_userwidget/generated/GeneratedNameWidget.dart.lib.js"}');
+  // Exports:
+  return {
+    vetappoapp__generatedappo_third_page_userwidget__generated__GeneratedNameWidget: GeneratedNameWidget
+  };
+}));
+
+//# sourceMappingURL=GeneratedNameWidget.dart.lib.js.map

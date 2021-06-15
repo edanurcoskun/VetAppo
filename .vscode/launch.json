@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "VetAppo",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "VetAppo (Dart Testss)",
+            "program": "lib/main.dart",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
